@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace TheAmuletsOfCamembert
@@ -11,7 +12,7 @@ namespace TheAmuletsOfCamembert
         public EpicWriter Writer;
         public Setup Setup;
 
-        private void Pause()
+        internal void Pause()
         {
             TextColor.WriteColor("Press any key to continue...\n", "sub");
             Console.ReadKey(true);
@@ -19,11 +20,21 @@ namespace TheAmuletsOfCamembert
 
         public Game()
         {
+            bool isWindows = System.Runtime.InteropServices.RuntimeInformation
+                                             .IsOSPlatform(OSPlatform.Windows);
+            if (isWindows == true)
+            {
+              Console.WindowWidth = 94;
+              Console.BufferWidth = 94;
+              Console.WindowHeight = 25;
+              Console.BufferHeight = 25;
+            }
             Player = new Player("Macrofaculty Student");
             TextColor = new TextColor();
             Writer = new EpicWriter();
             Setup = new Setup();
             Player.UpdateStats(true);
+            Console.Clear();
         }
 
         public void PlayerDead()
@@ -219,7 +230,7 @@ namespace TheAmuletsOfCamembert
                             if (monster.Loot[selection].Type == ItemType.Consumable)
                             {
                                 monster.DropItem(selection);
-                                
+
                             }
                         }
                         else if (selection >= monster.Loot.Count && selection < (monster.Loot.Count + Player.Backpack.Count))

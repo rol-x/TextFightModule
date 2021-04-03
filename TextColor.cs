@@ -42,7 +42,7 @@ namespace TheAmuletsOfCamembert
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
                     break;
                 case "sub":
-                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.ForegroundColor = ConsoleColor.Gray;
                     break;
                 case "equipment":
                     Console.ForegroundColor = ConsoleColor.Cyan;

@@ -7,11 +7,6 @@ namespace TheAmuletsOfCamembert
     {
         static void Main(string[] args)
         {
-            Console.WindowWidth = 94;
-            Console.BufferWidth = 94;
-            Console.WindowHeight = 25;
-            Console.BufferHeight = 25;
-
             Game Game = new Game();
 
             while (Game.Player.Alive())
