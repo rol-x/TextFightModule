@@ -1,4 +1,4 @@
-# The Amulets Of Camembert
+# The Amulets Of Camembert RPG Text Game
 
 # Fight Module
 Fight module containing items, effects and different monsters programmed as a part of The Amulets Of Camembert Project.
