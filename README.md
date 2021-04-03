@@ -1,7 +1,7 @@
 # The Amulets Of Camembert RPG Text Game
 
 # Fight Module
-Fight module containing items, effects and different monsters programmed as a part of The Amulets Of Camembert Project.
+This is the fight module containing items, effects and different monsters programmed as a part of The Amulets Of Camembert Project.
 
 # The Gameplay
 Player is presented with a foe, which has some HP, strength, defense and loot. At the beginning of each turn, the player decides whether to attack the enemy, manipulate his invetory or try to run away. As the player progresses, so does the gameplay, facing them with more demanding enemies and rewarding victories with XP and gold.
